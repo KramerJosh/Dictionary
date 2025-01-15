@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const url = "https://1rnoszgn46.execute-api.us-east-1.amazonaws.com/multichoice?tag=geology"
 
-function List (){
+function List ({title}){
     
     const [items, setItems] = useState([]);
 
@@ -20,7 +20,14 @@ function List (){
     
     return(
         <>
-        
+            <h1 className="list-title">{title}</h1>
+            <ul className="multiple-choice">
+                {items.map((item) => (
+                    <li>
+                        {item.}
+                    </li>
+                ))}
+            </ul>
         </>
     );
 }
