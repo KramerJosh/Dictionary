@@ -14,20 +14,22 @@ function List ({title}){
             }
             return response.json();
         })
-        .then((data) => setItems(data.results))
-        .catch((error) => console.log("error fetching data"))
-    })
+        .then((data) => setItems(data))
+        console.log(items)
+    }, [])
     
     return(
         <>
             <h1 className="list-title">{title}</h1>
             <ul className="multiple-choice">
                 {items.map((item) => (
-                    <li>
-                        {item.}
+                    <li key={item._id}>
+                       <button className="answer">{item.word}</button>
                     </li>
                 ))}
             </ul>
         </>
     );
 }
+
+export default List
