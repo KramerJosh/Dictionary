@@ -1,4 +1,4 @@
-function Button(label, destination) {
+function MultipleChoiceButton(label, destination) {
     return(
         <>
             <button className="quiz-button" onClick={console.log("test")}>{label}</button>
@@ -6,4 +6,4 @@ function Button(label, destination) {
     )
 }
 
-export default Button
+export default MultipleChoiceButton
