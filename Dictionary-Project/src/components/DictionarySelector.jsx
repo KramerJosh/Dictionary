@@ -1,10 +1,15 @@
+//TODO: When we click one of the buttons on this page:
+    //1 - we should route to the multipleChoice(prop) page
+    //2- we should pass the topic(as the prop) state down to that page as well
+
+
 import React, { useEffect, useState } from "react";
 // import { DictionaryContext } from "./DictionaryContext";
 // import { use } from "react";
 
-const DictionarySelector = () => {
-  const [topic, setTopic] = useState("");
+const DictionarySelector = ({setTag}) => {
   const [dictionaries, setDictionaries] = useState([]);
+
 
   useEffect(() => {
     fetch(
@@ -25,7 +30,7 @@ const DictionarySelector = () => {
         <h1>Dictionary Selector</h1>
         {dictionaries.map((dictionary, index) => {
             return (
-          <button key={index} onClick={() => setTopic(dictionary.tags)}>
+          <button key={index} onClick={() => setTag(dictionary.tags[0])}>
             {dictionary.title}
           </button>);
         })}
