@@ -1,19 +1,13 @@
-import { useState } from 'react'
-import './App.css'
-import Header from './components/Header'
-// import List from './components/List'
-import DictionarySelector from './components/DictionarySelector'
+// Bringing in the required import from 'react-router-dom'
+import { Outlet } from "react-router-dom";
 
 function App() {
-  const title = 'Test'
-
+  // The Outlet component will conditionally swap between the different pages according to the URL
   return (
     <>
-      <Header title={title}/>
-      {/* <List title={title}/> */}
-      <DictionarySelector />
+      <Outlet />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

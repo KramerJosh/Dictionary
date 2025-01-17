@@ -1,17 +1,20 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // import { DictionaryContext } from "./DictionaryContext";
 // import { use } from "react";
 
-
 const DictionarySelector = () => {
   const [topic, setTopic] = useState("");
-  const dictionaries = useEffect(() => {
+  const [dictionaries, setDictionaries] = useState([]);
+
+  useEffect(() => {
     fetch(
       `https://1rnoszgn46.execute-api.us-east-1.amazonaws.com/multi-details`
     )
       .then((response) => response.json())
-      .then((data) => console.log(data));
-    return data.dictionaries;
+      .then((data) => {
+        console.log(data.dictionaries);
+        setDictionaries(data.dictionaries || []);
+      });
   }, []);
 
   // const { topic, handleTopic, setTopic} =
