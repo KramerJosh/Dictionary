@@ -24,9 +24,10 @@ const DictionarySelector = () => {
       <div>
         <h1>Dictionary Selector</h1>
         {dictionaries.map((dictionary, index) => {
+            return (
           <button key={index} onClick={() => setTopic(dictionary.tags)}>
             {dictionary.title}
-          </button>;
+          </button>);
         })}
       </div>
     </>

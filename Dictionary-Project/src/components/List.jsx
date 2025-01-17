@@ -2,6 +2,9 @@
 //TODO: use react-router-dom so that we start on the DictionarySelector, then move to this page once a topic is chosen
 //TODO: Move the const url declaration to inside of the List component definition, and add a template literal for the tag to match the output of DictionarySelector
 
+//One call to get the topic
+//Once call to get the words+definitions
+
 
 import { useEffect, useState } from "react";
 
