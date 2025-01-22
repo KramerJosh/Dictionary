@@ -11,7 +11,7 @@ function App() {
     <>
     <DictionarySelector setTag={setTag}/>
     <div>{tag}</div>
-    <MultipleChoice />
+    <MultipleChoice tag={tag}/>
     </>
   );
 }
