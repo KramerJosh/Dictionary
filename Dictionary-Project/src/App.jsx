@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import DictionarySelector from "./components/DictionarySelector";
 import MultipleChoice from "./pages/MultipleChoice";
+import "../src/app.css"
 
 function App() {
   const [tag, setTag] = useState('')

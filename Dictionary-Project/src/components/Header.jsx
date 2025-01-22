@@ -2,7 +2,7 @@ function Header({title}) {
     return(
         <>
             <h1 className="title">{title}</h1>
-            <button className="back-button">Back</button>
+            <button style="background-color: lightblue" className="back-button">Back</button>
         </>
     );
 }

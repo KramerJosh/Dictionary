@@ -43,18 +43,23 @@ const MultipleChoice = ({ tag }) => {
 
   return (
     <div>
+           <br />
+            {definitions[randNum]}
+            <br /> <br />
       {fourWords.map((word, index) => {
         return (
           <div key={index}>
-            {" "}
-            <br />{" "}
+
             <button onClick={() => checkAnswer(index)}>{word.word}</button>
           </div>
         );
       })}
-      {definitions[randNum]}
+      <br /><br />
       <button onClick={() => pingCheck()}>Next Quesiton</button>
+      <p>By Samantha, Ryan, Nelson and Josh</p>
     </div>
+
+    
   );
 };
 

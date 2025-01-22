@@ -30,9 +30,10 @@ const DictionarySelector = ({setTag}) => {
         <h1>Dictionary Selector</h1>
         {dictionaries.map((dictionary, index) => {
             return (
-          <button key={index} onClick={() => setTag(dictionary.tags[0])}>
+          <button key={index} onClick={() => setTag(dictionary.tags[0])}>  
             {dictionary.title}
-          </button>);
+          </button>
+          );
         })}
       </div>
     </>

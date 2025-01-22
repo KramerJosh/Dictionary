@@ -40,3 +40,20 @@
 .read-the-docs {
   color: #888;
 }
+
+
+body button {
+  background-color: #90A8C3;
+  color: #4C243B;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  border-color: #ADA7C9;
+  border-width: 6px;
+  margin: 3px;
+}
+
+body {
+  background-color: #155979;
+  color: #F3FFBD;
+  font-size: 2rem;
+}
