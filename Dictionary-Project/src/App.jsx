@@ -10,7 +10,6 @@ function App() {
   return (
     <>
     <DictionarySelector setTag={setTag}/>
-    <div>{tag}</div>
     <MultipleChoice tag={tag}/>
     </>
   );
