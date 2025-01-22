@@ -13,11 +13,14 @@ const MultipleChoice = ({tag}) => {
     useEffect(() => {
         fetch(URL).then((response) => response.json())
         .then((data) => {
-             setFourWords(data);
+             setFourWords(data.entries());
         })
     }, [])
 
-    const wordOne = fourWords;
+
+    const wordOne = fourWords[0];
+
+    console.log(fourWords);
 
     return (
         <div>
